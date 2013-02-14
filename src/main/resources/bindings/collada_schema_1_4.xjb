@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jxb:bindings version="2.0"
+              xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <jxb:bindings schemaLocation="../xsd/collada_schema_1_4.xsd">
+        <jxb:bindings node="//xs:element[@name='skin']//xs:complexType//xs:sequence//xs:element[@ref='source']">
+            <jxb:property name="skin_source" />
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='skin']//xs:complexType//xs:attribute[@name='source']">
+            <jxb:property name="source_uri" />
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='morph']//xs:complexType//xs:sequence//xs:element[@ref='source']">
+            <jxb:property name="morph_source" />
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='morph']//xs:complexType//xs:attribute[@name='source']">
+            <jxb:property name="morph_uri" />
+        </jxb:bindings><!--        <jxb:bindings node="//xs:complexType[@name='skin_type']//xs:sequence//xs:element[@name='source']">
+            <jxb:property name="skin_source" />
+        </jxb:bindings>-->
+<!--        <jxb:bindings node="//xs:complexType[@name='skin_type']//xs:attribute[@name='source']">
+            <jxb:property name="source_uri" />
+        </jxb:bindings>-->
+<!--        <jxb:bindings node="//xs:complexType[@name='morph_type']//xs:sequence//xs:element[@name='source']">
+            <jxb:property name="morph_source" />
+        </jxb:bindings>-->
+<!--        <jxb:bindings node="//xs:complexType[@name='morph_type']//xs:attribute[@name='source']">
+            <jxb:property name="morph_uri" />
+        </jxb:bindings>-->
+    </jxb:bindings>
+</jxb:bindings>
