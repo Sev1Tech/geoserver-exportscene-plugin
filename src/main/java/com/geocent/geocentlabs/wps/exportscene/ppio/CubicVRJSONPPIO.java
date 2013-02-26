@@ -47,7 +47,7 @@ public class CubicVRJSONPPIO extends CDataPPIO {
     }
     
     @Override
-    public void encode(Object o, OutputStream out) throws Exception {
+    public void encode(Object sceneObject, OutputStream out) throws Exception {
         JSONObject jsonObject = new JSONObject();
 
         jsonObject.put("name", "terrainMesh");
@@ -57,7 +57,7 @@ public class CubicVRJSONPPIO extends CDataPPIO {
         JSONArray jsonFaces = new JSONArray();
         
         HashMap<Vertex, Integer> vertices = new LinkedHashMap<Vertex, Integer>();
-        for(Vertex[] face : ((SceneType)o).getFaces()) {
+        for(Vertex[] face : ((SceneType)sceneObject).getFaces()) {
             JSONArray jsonFace = new JSONArray();
             for(Vertex vertex : face) {
                 if(!vertices.containsKey(vertex)) {

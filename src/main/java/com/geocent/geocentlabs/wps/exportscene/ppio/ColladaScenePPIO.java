@@ -66,8 +66,11 @@ public class ColladaScenePPIO extends XMLPPIO {
     }
 
     @Override
-    public void encode(Object o, ContentHandler ch) throws Exception {
-
+    public void encode(Object sceneObject, ContentHandler ch) throws Exception {
+        marshaller.marshal(generateCollodaObject((SceneType)sceneObject), ch);
+    }
+    
+    public static COLLADA generateCollodaObject(SceneType sceneObject) {
         COLLADA colladaObject = new COLLADA();
         colladaObject.setVersion("1.4.1");
 
@@ -164,7 +167,7 @@ public class ColladaScenePPIO extends XMLPPIO {
 
         // Process the mesh faces
         HashMap<Vertex, Integer> facesVertices = new LinkedHashMap<Vertex, Integer>();
-        List<Vertex[]> faceVertices = ((SceneType) o).getFaces();
+        List<Vertex[]> faceVertices = sceneObject.getFaces();
         for (Vertex[] face : faceVertices) {
             for (Vertex vertex : face) {
                 if (!facesVertices.containsKey(vertex)) {
@@ -182,7 +185,7 @@ public class ColladaScenePPIO extends XMLPPIO {
         vertexAccessor.setCount(BigInteger.valueOf(facesVertices.size()));
         vertexArray.setCount(BigInteger.valueOf(vertexArray.getValue().size()));
         
-        marshaller.marshal(colladaObject, ch);
+        return colladaObject;
     }
 
     @Override

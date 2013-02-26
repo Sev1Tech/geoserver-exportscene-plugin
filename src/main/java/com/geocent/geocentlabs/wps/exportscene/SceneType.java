@@ -26,6 +26,7 @@ import com.vividsolutions.jts.triangulate.DelaunayTriangulationBuilder;
 import com.vividsolutions.jts.triangulate.quadedge.Vertex;
 import java.util.LinkedList;
 import java.util.List;
+import org.geotools.geometry.Envelope2D;
 
 /**
  * This object class serves as the interface object between the WPS interface class
@@ -38,9 +39,34 @@ import java.util.List;
  */
 public class SceneType {
     private final List<Coordinate> pointCloud;
+    private Envelope2D sceneEnvelope;
+    
+    private double sceneSizeX;
+    private double sceneSizeY;
     
     public SceneType() {
         pointCloud = new LinkedList<Coordinate>();
+    }
+
+    public Envelope2D getSceneEnvelope() {
+        return sceneEnvelope;
+    }
+
+    public void setSceneEnvelope(Envelope2D sceneEnvelope) {
+        this.sceneEnvelope = sceneEnvelope;
+    }
+
+    public double getSceneSizeX() {
+        return sceneSizeX;
+    }
+
+    public double getSceneSizeY() {
+        return sceneSizeY;
+    }
+    
+    public void setSceneSize(double x, double y) {
+        this.sceneSizeX = x;
+        this.sceneSizeY = y;
     }
     
     /**

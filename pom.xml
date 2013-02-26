@@ -85,6 +85,7 @@
                 </executions>
                 <configuration>
                     <schemaDirectory>src/main/resources/xsd</schemaDirectory>
+                    <schemaFiles>**/*.xsd</schemaFiles>
                     <bindingDirectory>src/main/resources/bindings</bindingDirectory>
                 </configuration>
             </plugin>        

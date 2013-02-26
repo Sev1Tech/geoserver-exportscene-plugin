@@ -67,6 +67,9 @@ public class ExportScene implements GSProcess {
             }
         }
         
+        sceneType.setSceneSize(sceneImage.getWidth(), sceneImage.getHeight());
+        sceneType.setSceneEnvelope(sceneCoverage.getEnvelope2D());
+        
         return sceneType;
     }    
 }
