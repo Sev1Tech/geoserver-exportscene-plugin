@@ -178,6 +178,7 @@ var CanvasInterface = function(options) {
                 contentType: "application/xml",
                 data: requestData,
                 dataType: "json",
+                crossDomain: true,
 				
                 success: function(modelData, textStatus, jqXHR ) {
                     context._log(context, "Generating scene object from model...");
@@ -228,6 +229,7 @@ var CanvasInterface = function(options) {
                 contentType: "application/xml",
                 data: requestData,
                 dataType: "xml",
+                crossDomain: true,
 
                 success: function(modelData, textStatus, jqXHR ) {
                     context._log(context, "Generating scene object from model...");
