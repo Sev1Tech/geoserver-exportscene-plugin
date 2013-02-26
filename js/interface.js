@@ -144,6 +144,8 @@ var CanvasInterface = function(options) {
     }
     
     this._requestData = function(dataURL, callback) {
+        var context = this;
+        
         $.ajax({
             url: dataURL,
             type: "GET",
@@ -178,7 +180,6 @@ var CanvasInterface = function(options) {
                 contentType: "application/xml",
                 data: requestData,
                 dataType: "json",
-                crossDomain: true,
 				
                 success: function(modelData, textStatus, jqXHR ) {
                     context._log(context, "Generating scene object from model...");
@@ -229,7 +230,6 @@ var CanvasInterface = function(options) {
                 contentType: "application/xml",
                 data: requestData,
                 dataType: "xml",
-                crossDomain: true,
 
                 success: function(modelData, textStatus, jqXHR ) {
                     context._log(context, "Generating scene object from model...");
