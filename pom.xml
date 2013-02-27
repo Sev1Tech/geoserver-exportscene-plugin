@@ -5,7 +5,7 @@
 
     <groupId>com.geocent.geocentlabs</groupId>
     <artifactId>geoserver-exportscene-plugin</artifactId>
-    <version>2.2-SNAPSHOT</version>
+    <version>2.2.0</version>
     <packaging>jar</packaging>
 
     <name>Geoserver 3-D Model Scene Exporter</name>

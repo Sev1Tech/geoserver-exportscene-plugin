@@ -39,7 +39,7 @@ import org.geoserver.wps.ppio.CDataPPIO;
  * <a href = "https://github.com/cjcliffe/CubicVR.js">CubicVR.js</a> javascript
  * framework.
  * 
- * @author jpenton
+ * @author Joshua Penton
  */
 public class CubicVRJSONPPIO extends CDataPPIO {
     protected CubicVRJSONPPIO() {

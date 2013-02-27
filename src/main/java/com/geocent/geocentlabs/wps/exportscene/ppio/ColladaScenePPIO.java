@@ -44,7 +44,7 @@ import org.xml.sax.ContentHandler;
  * <a href = "http://www.khronos.org/collada/">COLLADA</a> asset file conforming
  * to the 1.4.1 version of the specification.
  * 
- * @author jpenton
+ * @author Joshua Penton
  */
 public class ColladaScenePPIO extends XMLPPIO {
 
