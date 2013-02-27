@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="A web processing service plugin for Geoserver that provides a service to export elevation data from a layer to a standard 3-D model." />
+              
+        <title>Geoserver 3-D Model Scene Exporter</title>
         <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
     </head>
@@ -11,7 +14,7 @@
             <p>
                 This WPS plugin for Geoserver provides a service to export raster elevation data from a coverage store to a 3-D model for integration with external tools or frameworks.
 
-                The current implementation of the project supports exporting the terrain mesh to an industry standard COLLADA v1.4.1 asset file. A reference implementation is also included which allows for exporting the terrain mesh to a JSON format supported by the CubicVR.js javascript framework.
+                The current implementation of the project supports exporting the terrain mesh to an industry standard <a href ="http://www.khronos.org/collada/">COLLADA</a> v1.4.1 asset file. A reference implementation is also included which allows for exporting the terrain mesh to a JSON format supported by the <a href="https://github.com/cjcliffe/CubicVR.js">CubicVR.js</a> javascript framework.
             </p>
 
             <ul class="unstyled">
@@ -25,6 +28,8 @@
                     <a href = "demo/index.html"><i class="icon-globe"></i> Live Demonstration</a> (requires access to a Geoserver with the extension installed and <a href ="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">CORS</a> enabled)
                 </li>
             </ul>
+            
+            <p class="text-center">&copy; 2013 <a href ="http://www.geocent.com/">Geocent</a></p>
         </div>
     </body>
 </html>
