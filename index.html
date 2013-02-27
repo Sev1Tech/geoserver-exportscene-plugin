@@ -1,50 +1,30 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-
-        <script type="text/javascript" src="lib/jquery-1.8.3.min.js"></script>
-        <script type="text/javascript" src="lib/CubicVR.js"></script>
-
-        <script type="text/javascript" src="js/interface.js"></script>
-
-        <script type="text/javascript">
-            $(document).ready(function(){
-									
-                var canvasInterface = new CanvasInterface({
-                    console: "#console"
-                });
-            });
-        </script>
-
-        <title>Geoserver 3-D Scene Exporter Visualization</title>
+        <title></title>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
     </head>
-    <body style="background-color: #000000">
-        <div id="console" class="data-window"></div>
-        <div id="parameters" class="data-window">
-
+    <body>
+        <div class="container">
+            <h1>Geoserver 3-D Model Scene Exporter</h1>
             <p>
-                <label for="paramUrl">Geoserver WPS URL</label>
-                <br/>
-                <input type="text" id="paramUrl" value="http://localhost:8080/geoserver/wps"/>
-            <p/>
+                This WPS plugin for Geoserver provides a service to export raster elevation data from a coverage store to a 3-D model for integration with external tools or frameworks.
 
-            <p>
-                <label for="paramWorkspace">Workspace</label>
-                <br/>
-                <input type="text" id="paramWorkspace" value="geocent"/>
-            <p/>
-
-            <p>
-                <label for="paramLayer">Layer</label>
-                <br/>
-                <input type="text" id="paramLayer" value="elevation"/>
+                The current implementation of the project supports exporting the terrain mesh to an industry standard COLLADA v1.4.1 asset file. A reference implementation is also included which allows for exporting the terrain mesh to a JSON format supported by the CubicVR.js javascript framework.
             </p>
 
-            <p>
-                <label for="paramCoverage">Coverage (GML)</label>
-                <br/>
-                <textarea type="text" id="paramCoverage">POLYGON ((-156.10 18.90, -154.75 18.90, -154.75 20.35, -156.10  20.35, -156.10 18.90))</textarea>
-            <p>
+            <ul class="unstyled">
+                <li>
+                    <a href = "https://github.com/Geocent/geoserver-exportscene-plugin/"><i class="icon-home"></i> Project Repository</a>
+                </li>
+                <li>
+                    <a href = "javadoc/index.html"><i class="icon-book"></i> Project API Documentation</a>
+                </li>
+                <li>
+                    <a href = "demo/index.html"><i class="icon-globe"></i> Live Demonstration</a> (requires access to a Geoserver with the extension installed and <a href ="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">CORS</a> enabled)
+                </li>
+            </ul>
         </div>
     </body>
 </html>

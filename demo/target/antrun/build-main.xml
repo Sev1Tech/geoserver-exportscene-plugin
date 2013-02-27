@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy todir="/Users/jpenton/Personal/Development/apache-tomcat-7.0.34/webapps/geoserver/WEB-INF/lib" file="target/geoserver-exportscene-plugin-2.2.0.jar"/>
+</target>
+</project>

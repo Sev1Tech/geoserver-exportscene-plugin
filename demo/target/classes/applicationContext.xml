@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+  <beans>
+    <bean id="exportSceneWPS" class="com.geocent.geocentlabs.wps.exportscene.ExportScene"/>
+    
+    <bean id="colladaScenePPIO" class="com.geocent.geocentlabs.wps.exportscene.ppio.ColladaScenePPIO" />
+    <bean id="cubicVRPPIO" class="com.geocent.geocentlabs.wps.exportscene.ppio.CubicVRJSONPPIO" />
+  </beans>
